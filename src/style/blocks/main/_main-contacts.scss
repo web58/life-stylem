@@ -1,0 +1,142 @@
+.main-contacts {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  &__map {
+    position: relative;
+    height: 0;
+    padding-bottom: 90%;
+    overflow: hidden;
+    background-image: url('../img/covers/map.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 32px;
+    border-radius: 4px;
+
+    & iframe {
+      @include fw-block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    color: var(--accent);
+  }
+
+  &__adress {
+    margin-bottom: 16px;
+  }
+
+  &__shedule {
+    margin-bottom: 16px;
+  }
+
+  &__email {
+    margin-bottom: 20px;
+
+    & a {
+      color: var(--blue);
+      font-weight: 500;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 16px;
+
+    & a {
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__messengers {
+    margin-bottom: 16px;
+  }
+
+  &__cb-trigger {
+    margin-bottom: 20px;
+    color: var(--blue);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  &__socials {
+    & > div {
+      margin-bottom: 18px;
+    }
+
+    & svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  @include media-min ($md) {
+    &__map {
+      padding-bottom: 0;
+      height: 100%;
+      min-height: 520px;
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__map {
+      min-height: 640px;
+    }
+
+    &__main {
+      padding-left: 50px;
+    }
+
+    &__email {
+      margin-bottom: 20px;
+
+      & a {
+        transition: text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          text-decoration-color: transparent;
+        }
+      }
+    }
+
+    &__phone {
+      margin-bottom: 16px;
+
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--blue);
+          text-decoration-color: var(--blue);
+        }
+      }
+    }
+
+    &__cb-trigger {
+      transition: text-decoration-color .2s ease-in-out;
+
+      &:hover {
+        text-decoration-color: transparent;
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__map {
+      min-height: 800px;
+    }
+  }
+}

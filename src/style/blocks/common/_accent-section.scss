@@ -1,0 +1,138 @@
+.accent-section {
+  --section-offset-t: 70px;
+  --section-offset-b: 70px;
+
+  &--green {
+    --section-bg-color: var(--accent);
+  }
+
+  &--gray {
+    --section-bg-color: var(--gray-90);
+  }
+
+  padding-top: var(--section-offset-t, 70px);
+  padding-bottom: var(--section-offset-b, 70px);
+  background-color: var(--section-bg-color);
+
+  &__card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__cover {
+    position: relative;
+    height: 0;
+    padding-bottom: 310px;
+    overflow: hidden;
+
+    & img {
+      object-fit: cover;
+
+      @include fw-block;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    color: var(--black);
+    background-color: var(--white);
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__descr {
+    margin-bottom: 24px;
+
+    @include cms-text;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 10px;
+    margin-bottom: 24px;
+
+    & li {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      column-gap: 16px;
+      align-items: center;
+    }
+
+    & img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__btn {
+    --btn-fz: 18px;
+    --btn-offset: 16px 20px;
+
+    font-weight: 500;
+    width: 100%;
+  }
+
+  @include media-min ($md) {
+    &__card {
+      position: relative;
+    }
+
+    &__cover {
+      padding-bottom: 440px;
+    }
+
+    &__content {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+      width: 420px;
+      background: rgba(255, 255, 255, 0.9);
+
+      &--right {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &__btn {
+      width: auto;
+    }
+  }
+
+
+  @include media-min ($xl) {
+    --section-offset-t: 100px;
+    --section-offset-b: 100px;
+
+    &__content {
+      width: 645px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__descr {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    --section-offset-t: 120px;
+    --section-offset-b: 120px;
+  }
+}

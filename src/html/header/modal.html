@@ -1,0 +1,27 @@
+<div class="header-modal"
+     aria-hidden="true">
+  <div class="header-modal__content">
+    <div class="container">
+      <nav class="header-modal__nav header-nav">
+        @include('nav.html')
+      </nav>
+      <div class="header-modal__cb">
+        <div class="header-modal__phone">
+          <a href="tel:+79996110527">+7 (999) 611-05-27</a>
+        </div>
+        <button class="btn-reset small-text header-modal__cb-trigger"
+                type="button"
+                data-hystmodal="#callback-modal">Заказать звонок</button>
+      </div>
+      <div class="header-modal__adress">
+        <span>Московская область, г. Одинцово, ул. Вокзальная, 2</span>
+      </div>
+      <div class="header-modal__socials">
+        @include('../common/socials.html')
+      </div>
+      <button class="btn-reset btn small-text header-modal__request-trigger"
+              type="button"
+              data-hystmodal="#request-modal">Заявка на расчет</button>
+    </div>
+  </div>
+</div>

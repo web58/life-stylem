@@ -1,0 +1,68 @@
+.main-catalog-cat {
+  position: relative;
+  padding: 20px;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--gray-20);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__cover {
+    position: relative;
+    height: 0;
+    padding-bottom: 280px;
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    @include no-image;
+
+    & img {
+      border-radius: 4px;
+      object-fit: cover;
+
+      @include fw-block;
+    }
+  }
+
+  &__link {
+    color: var(--black);
+    text-decoration-color: transparent;
+
+    &::after {
+      content: '';
+
+      @include fw-block;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 30px;
+    transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+
+    &:hover {
+      border-color: transparent;
+      box-shadow: 1px 3px 36px rgba(50, 49, 47, 0.04);
+    }
+
+    &__cover {
+      margin-bottom: 24px;
+    }
+
+    &__link {
+      transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+      &:hover {
+        color: var(--blue);
+        text-decoration-color: var(--blue);
+      }
+    }
+
+  }
+
+  @include media-min ($xxl) {
+    &__cover {
+      margin-bottom: 30px;
+      padding-bottom: 320px;
+    }
+  }
+}

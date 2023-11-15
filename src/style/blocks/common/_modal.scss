@@ -1,0 +1,109 @@
+.modal {
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  width: calc(100% - 30px);
+  max-width: 360px;
+  color: var(--black-100);
+  background-color: var(--white);
+  border-radius: 4px;
+
+  &__close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    color: var(--gray-50);
+    cursor: pointer;
+  }
+
+  &__close-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__main {
+    margin-bottom: 24px;
+
+    @include cms-text;
+  }
+
+  &__btn {
+    --btn-fz: 16px;
+    --btn-offset: 12px 28px;
+
+    font-weight: 600;
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 24px;
+  }
+
+  &__submit {
+    --btn-fz: 16px;
+    --btn-offset: 12px 28px;
+
+    justify-self: start;
+  }
+
+  @include media-min ($md) {
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+
+    &__close {
+      width: 38px;
+      height: 38px;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__main {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 50px;
+    max-width: 600px;
+
+    &__btn {
+      --btn-fz: 16px;
+      --btn-offset: 14px 32px;
+
+      font-weight: 600;
+    }
+
+    &__submit {
+      margin-top: 8px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding: 60px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__main {
+      margin-bottom: 40px;
+    }
+
+    &__submit {
+      margin-top: 16px;
+    }
+  }
+}

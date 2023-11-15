@@ -1,0 +1,47 @@
+<section class="contacts">
+  <div class="container">
+    <h1 class="indent-reset t1 contacts__title">Контакты</h1>
+    <div class="contacts__map">
+      @include('../common/map.html')
+    </div>
+    <div class="contacts__grid">
+      <div class="contacts-block">
+        <div class="contacts-block__wrapper">
+          <div class="small-text contacts-block__title">Адрес</div>
+          <div class="st1 contacts-block__subtitle">ТЦ Андромеда мебель</div>
+          <div>
+            <span>Московская обл. г. Одинцово ул. Вокзальная д.2</span>
+          </div>
+          <div>
+            <span>с 8-00 до 20-00 без выходных</span>
+          </div>
+          <div class="contacts-block__email">
+            <a href="mailto:life-stylem@mail.ru">life-stylem@mail.ru</a>
+          </div>
+        </div>
+      </div>
+      <div class="contacts-block">
+        <div class="contacts-block__wrapper">
+          <div class="small-text contacts-block__title">Телефоны</div>
+          <div class="st1 contacts-block__phone">
+            <a href="tel:+79996110527">+7 (999) 611-05-27</a>
+          </div>
+          <div class="contacts-block__messengers">
+            @include('../common/messengers.html')
+          </div>
+          <button class="btn-reset contacts-block__cb-trigger"
+                  type="button"
+                  data-hystmodal="#callback-modal">Заказать звонок</button>
+        </div>
+      </div>
+      <div class="contacts-block">
+        <div class="contacts-block__wrapper">
+          <div class="small-text contacts-block__title">Мы в соцсетях</div>
+          <div class="contacts-block__socials">
+            @include('../common/socials.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

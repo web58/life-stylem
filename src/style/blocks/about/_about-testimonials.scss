@@ -1,0 +1,60 @@
+.about-testimonials {
+  padding-top: 35px;
+  padding-bottom: 70px;
+
+  &__title {
+    display: grid;
+    row-gap: 20px;
+    text-align: center;
+    margin-bottom: 32px;
+
+    & span {
+      color: var(--accent);
+    }
+  }
+
+  &__slide {
+    position: relative;
+    height: 0;
+    padding-bottom: 330px;
+    text-align: center;
+
+    & img {
+      object-fit: contain;
+
+      @include fw-block;
+    }
+  }
+
+  &__controls {
+    display: none;
+  }
+
+  &__pagination {
+    --bullet-color: var(--gray-20);
+  }
+
+  @include media-min ($xl) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+
+    &__title {
+      row-gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    &__controls {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      color: var(--accent);
+      transform: translateY(-50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+  }
+
+}

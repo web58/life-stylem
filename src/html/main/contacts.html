@@ -1,0 +1,39 @@
+<section class="main-contacts">
+  <div class="container">
+    <div class="row align-items-md-center">
+      <div class="col-12 col-md-6 col-xl-7">
+        <div class="main-contacts__map">
+          @include('../common/map.html')
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-5">
+        <div class="main-contacts__main">
+          <h2 class="indent-reset t2 main-contacts__title">Свяжитесь с нами</h2>
+          <div class="st1 main-contacts__subtitle">ТЦ Андромеда мебель</div>
+          <div class="main-contacts__adress">
+            <span>Московская обл. г. Одинцово ул. Вокзальная д.2</span>
+          </div>
+          <div class="main-contacts__shedule">
+            <span>с 8-00 до 20-00 без выходных</span>
+          </div>
+          <div class="main-contacts__email">
+            <a href="mailto:life-stylem@mail.ru">life-stylem@mail.ru</a>
+          </div>
+          <div class="st1 main-contacts__phone">
+            <a href="tel:+79996110527">+7 (999) 611-05-27</a>
+          </div>
+          <div class="main-contacts__messengers">
+            @include('../common/messengers.html')
+          </div>
+          <button class="btn-reset main-contacts__cb-trigger"
+                  type="button"
+                  data-hystmodal="#callback-modal">Заказать звонок</button>
+          <div class="main-contacts__socials">
+            <div><b>Мы в соцсетях</b></div>
+            @include('../common/socials.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

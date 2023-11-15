@@ -1,0 +1,22 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  &__wrapper {
+    box-sizing: border-box;
+  }
+
+  &__pagination {
+    --swiper-theme-color: var(--accent);
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-inactive-color: var(--bullet-color, var(--black));
+    --swiper-pagination-bullet-horizontal-gap: 2px;
+
+    text-align: center;
+    overflow: hidden;
+
+    & .swiper-pagination-bullet {
+      transition: background-color .2s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.product-covers {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__photo {
+    position: relative;
+    height: 0;
+    padding-bottom: 235px;
+    overflow: hidden;
+    border-radius: 4px;
+
+    & img {
+      @include fw-block;
+    }
+
+    &--main {
+      padding-bottom: 400px;
+      grid-column: span 2;
+
+      @include no-image;
+    }
+  }
+
+  @include media-min ($md) {
+    &__photo {
+      width: 210px;
+      padding-bottom: 260px;
+
+      &--main {
+        width: 450px;
+        padding-bottom: 0;
+        height: 100%;
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__photo {
+      width: 160px;
+      padding-bottom: 256px;
+
+      &--main {
+        width: 445px;
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__photo {
+      width: 240px;
+      padding-bottom: 376px;
+
+      &--main {
+        width: 645px;
+      }
+    }
+  }
+}

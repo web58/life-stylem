@@ -1,0 +1,18 @@
+.product-info {
+  display: grid;
+  row-gap: 4px;
+  margin: 0;
+
+  &__item {
+    display: flex;
+
+    & dt {
+      font-weight: 600;
+    }
+
+    & dd {
+      margin: 0;
+      margin-left: 4px;
+    }
+  }
+}

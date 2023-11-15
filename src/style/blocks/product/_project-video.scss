@@ -1,0 +1,17 @@
+.project-video {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  @include media-min ($xl) {
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+}

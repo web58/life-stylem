@@ -1,0 +1,42 @@
+.main-catalog {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: var(--black);
+  background-color: var(--white);
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+
+    @include cms-text;
+  }
+
+  &__categories {
+    display: grid;
+    gap: 20px;
+  }
+
+  @include media-min ($md) {
+    &__categories {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__descr {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}

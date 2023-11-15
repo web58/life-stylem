@@ -1,0 +1,94 @@
+.footer-bottom {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  color: var(--black);
+  background-color: var(--gray-10);
+  text-align: center;
+
+  &__wrapper {
+    display: grid;
+    row-gap: 40px;
+  }
+
+  &__main {
+    display: grid;
+    row-gap: 20px;
+    color: var(--gray-50);
+    font-size: 16px;
+  }
+
+  &__link {
+    & a {
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 30px;
+    text-align: left;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 0;
+    }
+
+    &__main {
+      display: flex;
+      row-gap: 0;
+      margin: -10px;
+
+      & > * {
+        margin: 10px;
+      }
+    }
+
+    &__link {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--blue);
+          text-decoration-color: var(--blue);
+        }
+      }
+    }
+
+    &__socials {
+      margin-left: auto;
+    }
+
+    &__dev {
+      flex-basis: 100%;
+      text-align: right;
+      padding-top: 24px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &__main {
+      display: flex;
+      row-gap: 0;
+      margin: -10px -35px;
+
+      & > * {
+        margin: 10px 35px;
+      }
+    }
+
+    &__dev {
+      flex-basis: auto;
+      padding-top: 0;
+      margin-left: 30px;
+    }
+  }
+}

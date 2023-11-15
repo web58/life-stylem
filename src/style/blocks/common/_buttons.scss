@@ -1,0 +1,54 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--btn-fz, 20px);
+  line-height: 1.2;
+  padding: var(--btn-offset, 16px 32px 18px);
+  color: var(--btn-color, var(--white));
+  background-color: var(--btn-bg, var(--accent));
+  border: 1px solid var(--btn-border, var(--btn-bg, var(--accent)));
+  border-radius: 99em;
+  text-decoration: none;
+  transition: color var(--timing, .2s) ease-in-out, background-color var(--timing, .2s) ease-in-out, border-color var(--timing, .2s) ease-in-out;
+
+  &:active {
+    color: var(--black);
+    background-color: var(--white);
+    border-color: var(--accent-hov);
+  }
+
+  &--iconed {
+    color: var(--accent);
+
+    & span {
+      color: var(--btn-color, var(--black));
+      transition: color var(--timing, .2s) ease-in-out;
+    }
+
+    &:active {
+      color: var(--accent-hov);
+      background-color: var(--white);
+      border-color: var(--accent-hov);
+    }
+  }
+
+  @include media-min ($xl) {
+    &:hover:not(:active) {
+      background-color: var(--accent-hov);
+      border-color: var(--accent-hov);
+    }
+
+    &--iconed {
+      &:hover:not(:active) {
+        color: var(--white);
+        background-color: var(--accent-hov);
+        border-color: var(--accent-hov);
+
+        & span {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}

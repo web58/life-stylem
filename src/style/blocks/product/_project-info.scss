@@ -1,0 +1,29 @@
+.project-info {
+  &__descr {
+    @include cms-text;
+  }
+
+  &__info {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 4px;
+    overflow: hidden;
+
+    & tbody td {
+      padding: 6px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--gray-20);
+
+      &:first-of-type {
+        color: var(--gray-50);
+      }
+    }
+
+    & tfoot td {
+      vertical-align: top;
+      padding: 10px 6px;
+      color: var(--white);
+      background-color: var(--black);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.main-about {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 24px;
+
+    & span {
+      color: var(--accent);
+    }
+  }
+
+  &__descr {
+    margin-bottom: 30px;
+
+    @include cms-text;
+  }
+
+  &__advantages {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  @include media-min ($md) {
+    &__descr {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    margin-top: 100px;
+
+    &__advantages {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+}

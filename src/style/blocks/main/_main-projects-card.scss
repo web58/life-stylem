@@ -1,0 +1,118 @@
+.main-projects-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: var(--black);
+  background-color: var(--gray-10);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__cover {
+    position: relative;
+    height: 0;
+    padding-bottom: 280px;
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    @include no-image;
+
+    & img {
+      border-radius: 4px;
+      object-fit: cover;
+
+      @include fw-block;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    color: var(--gray-50);
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    & a {
+      color: inherit;
+      text-decoration: none;
+
+      &::after {
+        content: '';
+
+        @include fw-block;
+      }
+    }
+  }
+
+  &__excerpt {
+    @include cms-text;
+  }
+
+  @include media-min ($md) {
+    &:first-of-type {
+      flex-direction: row;
+
+      .main-projects-card__cover {
+        width: 50%;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        margin-right: 16px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    flex-direction: row-reverse;
+    padding: 30px;
+    height: auto;
+    transition: background-color .2s ease-in-out, box-shadow .2s ease-in-out;
+
+    &:first-of-type {
+      flex-direction: column;
+
+      .main-projects-card__cover {
+        width: 100%;
+        min-height: 425px;
+        margin: 0;
+        margin-bottom: 24px;
+      }
+    }
+
+    &:hover {
+      background-color: var(--white);
+      box-shadow: 1px 3px 36px 0 rgba(50, 49, 47, 0.04);
+    }
+
+    &__cover {
+      width: 50%;
+      height: auto;
+      min-height: 280px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      margin-left: 24px;
+      flex-shrink: 0;
+    }
+
+    &__date {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &:first-of-type {
+      .main-projects-card__cover {
+        min-height: 485px;
+      }
+    }
+
+    &__cover {
+      min-height: 285px;
+    }
+  }
+}

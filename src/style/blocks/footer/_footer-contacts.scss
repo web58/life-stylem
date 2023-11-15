@@ -1,0 +1,44 @@
+.footer-contacts {
+  &__phone {
+    margin-bottom: 24px;
+
+    & a {
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__messengers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+
+  &__request-trigger {
+    --btn-offset: 12px 32px 14px;
+    --btn-fz: 16px;
+
+    font-weight: 600;
+  }
+
+  @include media-min ($xl) {
+    &__phone {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--blue);
+          text-decoration-color: var(--blue);
+        }
+      }
+    }
+
+    &__messengers {
+      justify-content: flex-start;
+    }
+  }
+}

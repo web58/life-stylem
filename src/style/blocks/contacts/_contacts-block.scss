@@ -1,0 +1,80 @@
+.contacts-block {
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--gray-20);
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__wrapper {
+    display: grid;
+    row-gap: 16px;
+    justify-items: start;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    color: var(--accent);
+  }
+
+  &__email {
+    & a {
+      color: var(--blue);
+    }
+  }
+
+  &__phone {
+    & a {
+      color: var(--black);
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__cb-trigger {
+    color: var(--blue);
+    text-decoration: underline;
+  }
+
+  &__socials {
+    & svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 24px;
+
+    &__email {
+      & a {
+        transition: text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          text-decoration-color: transparent;
+        }
+      }
+    }
+
+    &__phone {
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--blue);
+          text-decoration-color: var(--blue);
+        }
+      }
+    }
+
+    &__cb-trigger {
+      transition: text-decoration-color .2s ease-in-out;
+
+      &:hover {
+        text-decoration-color: transparent;
+      }
+    }
+  }
+}

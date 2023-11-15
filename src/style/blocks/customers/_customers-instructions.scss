@@ -1,0 +1,51 @@
+.customers-instructions {
+  counter-reset: how-order;
+
+  &__item {
+    padding: 24px;
+    color: var(--black);
+    background-color: var(--white);
+    border: 1px solid var(--gray-20);
+    border-radius: 8px;
+
+    &--numeric {
+      counter-increment: how-order;
+
+      &::before {
+        content: '0'counter(how-order);
+        font-size: 48px;
+        line-height: 1;
+        font-weight: 600;
+        color: var(--accent);
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+
+  &__title {
+    margin: 20px 0;
+  }
+
+  &__descr {
+    @include cms-text;
+
+    & a {
+      color: var(--blue);
+    }
+  }
+
+  @include media-min ($xl) {
+    &__item {
+      &--numeric {
+        &::before {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}

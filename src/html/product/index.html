@@ -1,0 +1,94 @@
+<article class="product">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-xl-7">
+        <div class="product__covers product-covers">
+          <div class="product-covers__photo product-covers__photo--main">
+            <a href="img/temp/prod1.jpg"
+               data-fslightbox="product-cover">
+              <img src="img/temp/prod1.jpg"
+                   alt="">
+            </a>
+          </div>
+          <div class="product-covers__photo">
+            <a href="img/temp/prod2.jpg"
+               data-fslightbox="product-cover">
+              <img src="img/temp/prod2.jpg"
+                   alt="">
+            </a>
+          </div>
+          <div class="product-covers__photo">
+            <a href="img/temp/prod3.jpg"
+               data-fslightbox="product-cover">
+              <img src="img/temp/prod3.jpg"
+                   alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-5">
+        <div class="product__content">
+          <h1 class="indent-reset t1 product__title">Кухня Emily</h1>
+          <dl class="product__info product-info">
+            <div class="product-info__item">
+              <dt>Материал фасада</dt>
+              <dd>МДФ, стекло</dd>
+            </div>
+            <div class="product-info__item">
+              <dt>Материал корпуса</dt>
+              <dd>ЛДСП</dd>
+            </div>
+            <div class="product-info__item">
+              <dt>Фурнитура</dt>
+              <dd>Blum</dd>
+            </div>
+          </dl>
+          <div class="st1 product__price">от 64 000 руб./пог. м</div>
+          <button class="btn-reset btn product__modal-trigger"
+                  type="button"
+                  data-hystmodal="#request-modal">Заказать расчёт</button>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="product-gallery">
+          <div class="st1 product-gallery__title">Больше фотографий кухни Emily</div>
+          <div class="product-gallery__slider slider">
+            <div class="swiper-wrapper slider__wrapper">
+              <div class="swiper-slide product-gallery__slide">
+                <a href="img/temp/prod1.jpg"
+                   data-fslightbox="product-gallery">
+                  <img src="img/temp/prod1.jpg"
+                       alt="">
+                </a>
+              </div>
+              <div class="swiper-slide product-gallery__slide">
+                <a href="img/temp/prod2.jpg"
+                   data-fslightbox="product-gallery">
+                  <img src="img/temp/prod1.jpg"
+                       alt="">
+                </a>
+              </div>
+              <div class="swiper-slide product-gallery__slide">
+                <a href="img/temp/prod3.jpg"
+                   data-fslightbox="product-gallery">
+                  <img src="img/temp/prod1.jpg"
+                       alt="">
+                </a>
+              </div>
+              <div class="swiper-slide product-gallery__slide">
+                <a href="img/temp/prod4.jpg"
+                   data-fslightbox="product-gallery">
+                  <img src="img/temp/prod1.jpg"
+                       alt="">
+                </a>
+              </div>
+            </div>
+            <div class="product-gallery__pagination slider__pagination"></div>
+            <div class="product-gallery__controls">@include('../common/slider-controls.html')</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+@include('../common/quiz.html')

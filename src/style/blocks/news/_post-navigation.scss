@@ -1,0 +1,48 @@
+.post-navigation {
+  padding-top: 50px;
+  display: grid;
+  gap: 30px;
+
+  &__link {
+    padding: 6px 18px;
+    text-decoration-color: transparent;
+    color: inherit;
+    background-repeat: no-repeat;
+    background-size: 7px auto;
+    border: 1px solid var(--accent);
+    border-radius: 18px;
+    max-width: 330px;
+
+    &--prev {
+      padding-left: 36px;
+      justify-self: start;
+      background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11L0.999999 6L6 1' stroke='%23AACC00' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-position: left 12px center;
+    }
+
+    &--next {
+      padding-right: 36px;
+      justify-self: end;
+      background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L0.999998 11' stroke='%23AACC00' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-position: right 12px center;
+    }
+  }
+
+  @include media-min ($md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  @include media-min ($xl) {
+    &__link {
+      transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+        text-decoration-color: var(--accent);
+      }
+    }
+  }
+}

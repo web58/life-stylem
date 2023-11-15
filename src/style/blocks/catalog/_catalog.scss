@@ -1,0 +1,108 @@
+.catalog {
+  padding-top: 16px;
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__categories {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  &__sub-categories {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > * {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__descr {
+    @include cms-text;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  @include media-min ($md) {
+    &__categories {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    &__sub-categories {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    &__products {
+      margin: -15px;
+
+      & > * {
+        max-width: calc(50% - 30px);
+        margin: 15px;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__categories {
+      margin-bottom: 60px;
+    }
+
+    &__sub-categories {
+      margin-bottom: 60px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__products {
+      margin: -15px;
+
+      & > * {
+        max-width: calc(33.33% - 30px);
+        margin: 15px;
+      }
+    }
+
+    &__pagination {
+      margin-top: 60px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 20px;
+    padding-bottom: 100px;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__categories {
+      margin-bottom: 80px;
+    }
+
+    &__sub-categories {
+      margin-bottom: 80px;
+    }
+  }
+}

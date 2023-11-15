@@ -1,0 +1,28 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+
+  & > * {
+    margin: 10px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include media-min ($xl) {
+    &__link {
+      transition: transform .2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+}

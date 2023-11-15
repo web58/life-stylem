@@ -1,0 +1,40 @@
+.header-top {
+  display: none;
+
+  @include media-min ($xl) {
+    display: block;
+    color: var(--black);
+    background-color: var(--gray-10);
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      height: 62px;
+    }
+
+    &__adress {
+      font-size: 16px;
+      margin-right: auto;
+    }
+
+    &__socials {
+      padding: 0 30px;
+    }
+
+    &__request-trigger {
+      --btn-offset: 8px 12px 9px;
+      --btn-bg: var(--black);
+      --btn-fz: 16px;
+
+      font-weight: 600;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__request-trigger {
+      --btn-offset: 8px 50px 9px;
+    }
+  }
+}

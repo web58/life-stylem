@@ -1,0 +1,45 @@
+<header class="site__header">
+  @include('top.html')
+  <div class="header-main@if(context.page === 'home') { header-main--clear}">
+    <div class="container">
+      <div class="header-main__wrapper">
+        <div class="header-main__burger">
+          <button class="just-burger"
+                  type="button"
+                  aria-label="Меню"
+                  id="just-burger">
+            <span class="just-burger__line just-burger__line--top"></span>
+            <span class="just-burger__line just-burger__line--middle"></span>
+            <span class="just-burger__line just-burger__line--bottom"></span>
+          </button>
+        </div>
+        <div class="header-main__logo">
+          <a href="page-main.html">
+            <svg width="90"
+                 height="21"
+                 aria-label="Лайф стайл мебель">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
+        <nav class="header-main__nav header-nav">@include('nav.html')</nav>
+        <div class="header-main__cb">
+          <div class="header-main__phone">
+            <a href="tel:+79996110527">
+              <svg width="18"
+                   height="18"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+              <span>+7 (999) 611-05-27</span>
+            </a>
+          </div>
+          <button class="btn-reset small-text header-main__cb-trigger"
+                  type="button"
+                  data-hystmodal="#callback-modal">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  @include('modal.html')
+</header>

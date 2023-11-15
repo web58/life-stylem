@@ -1,0 +1,233 @@
+.header-nav {
+  & a {
+    display: inline-block;
+    color: inherit;
+    text-decoration-color: transparent;
+  }
+
+  &__menu {
+    display: grid;
+    row-gap: 24px;
+    margin-bottom: 24px;
+
+    & ul {
+      display: none;
+      row-gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      @include anim(fade, 0.15s)
+    }
+
+    & > li {
+      & > a {
+        font-weight: 600;
+      }
+
+      & ul {
+        margin-top: 16px;
+        margin-left: 20px;
+      }
+    }
+
+    & .has-child {
+      & > a {
+        position: relative;
+        padding-right: 22px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 10px;
+          right: 0;
+          z-index: 1;
+          width: 12px;
+          height: 6px;
+          background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.25L6.5 6.75L12 1.25' stroke='%2332312F'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: contain;
+          transition: transform .2s ease-in-out;
+        }
+      }
+    }
+
+    & .is-expanded {
+      & a {
+        &::after {
+          transform: rotateZ(180deg);
+        }
+      }
+
+      & > ul {
+        display: grid;
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__menu {
+      display: contents;
+      row-gap: 0;
+      margin: 0;
+      font-size: 16px;
+
+      & ul {
+        color: var(--black);
+      }
+
+      & > li {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        & a {
+          padding-right: 0;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        & > a {
+          font-weight: 400;
+        }
+
+        &:hover,
+        &:focus-within {
+          & > ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin: 0;
+            display: block;
+            padding-top: 30px;
+            width: 220px;
+            border-radius: 0 0 4px 4px;
+            overflow: hidden;
+
+            & li {
+              padding: 8px 24px;
+              background-color: var(--white);
+
+              &:first-child {
+                padding-top: 24px;
+                border-radius: 4px 4px 0 0;
+              }
+
+              &:last-child {
+                padding-bottom: 24px;
+              }
+            }
+          }
+        }
+      }
+
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--blue);
+          text-decoration-color: var(--blue);
+        }
+      }
+
+      & .has-child {
+        & > a {
+          padding-right: 0;
+        }
+      }
+    }
+
+    &__catalog {
+      margin-right: 14px;
+
+      & > li {
+        color: var(--catalog-color-btn);
+        background-color: var(--catalog-bg-btn);
+        border-radius: 99em;
+        padding-right: 18px;
+        padding-left: 48px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 13px;
+          left: 18px;
+          width: 20px;
+          height: 20px;
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3.63672' y='2' width='20' height='2' rx='1' transform='rotate(45 3.63672 2)' fill='%2332312F'/%3E%3Crect x='2.22266' y='16' width='20' height='2' rx='1' transform='rotate(-45 2.22266 16)' fill='%2332312F'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: contain;
+          transform: scale(0);
+          transition: transform .2s ease-in-out;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 16px;
+          left: 18px;
+          width: 20px;
+          height: 12px;
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='2' rx='1' fill='%2332312F'/%3E%3Crect y='5' width='16' height='2' rx='1' fill='%2332312F'/%3E%3Crect y='10' width='20' height='2' rx='1' fill='%2332312F'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: contain;
+          transition: transform .2s ease-in-out;
+        }
+
+        &:hover,
+        &:focus-within {
+          &::before {
+            transform: scale(1);
+          }
+
+          &::after {
+            transform: scale(0);
+          }
+        }
+
+        & > a {
+          font-weight: 600;
+
+          &:hover {
+            color: inherit;
+            text-decoration-color: transparent;
+          }
+        }
+      }
+    }
+
+    &__simple {
+      & .has-child {
+        padding-right: 22px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 19px;
+          right: 0;
+          z-index: 1;
+          width: 12px;
+          height: 6px;
+          background-image: var(--menu-arrow);
+          background-repeat: no-repeat;
+          background-size: contain;
+          transition: transform .2s ease-in-out;
+        }
+
+        &:hover {
+          &::after {
+            transform: rotateZ(180deg);
+          }
+        }
+
+        &:focus-within {
+          &::after {
+            transform: rotateZ(180deg);
+          }
+        }
+      }
+    }
+  }
+}

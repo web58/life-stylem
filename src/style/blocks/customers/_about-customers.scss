@@ -1,0 +1,61 @@
+.about-customers {
+  padding-top: 16px;
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    margin-bottom: 32px;
+  }
+
+  &__instuctions {
+    display: grid;
+    row-gap: 50px;
+  }
+
+  &__content-grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  @include media-min ($md) {
+    &__instuctions {
+      row-gap: 60px;
+    }
+
+    &__content-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 80px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__instuctions {
+      row-gap: 80px;
+    }
+
+    &__content-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 20px;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__subtitle {
+      margin-bottom: 40px;
+    }
+  }
+}

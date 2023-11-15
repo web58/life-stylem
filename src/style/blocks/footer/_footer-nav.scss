@@ -1,0 +1,62 @@
+.footer-nav {
+  &__menu {
+    font-size: 16px;
+    display: grid;
+    row-gap: 24px;
+
+    & ul {
+      display: grid;
+      margin: 0;
+      margin-top: 16px;
+      padding: 0;
+      list-style: none;
+      row-gap: 12px;
+    }
+
+    & a {
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+
+    & > li > a {
+      font-weight: 600;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__menu {
+      display: flex;
+      row-gap: 0;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: -15px -3px;
+
+      & > * {
+        margin: 15px 3px;
+      }
+
+      & a {
+        transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+        &:hover {
+          color: var(--blue);
+          text-decoration-color: var(--blue);
+        }
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__menu {
+      display: flex;
+      row-gap: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: -15px -30px;
+
+      & > * {
+        margin: 15px 30px;
+      }
+    }
+  }
+}

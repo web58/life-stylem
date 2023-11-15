@@ -1,0 +1,41 @@
+.main-hero {
+  color: var(--white);
+  background-color: var(--black);
+
+  &__pagination {
+    --bullet-color: var(--white);
+
+    position: absolute;
+    margin-bottom: 16px;
+    z-index: 1;
+  }
+
+  &__controls {
+    display: none;
+  }
+
+  @include media-min ($xl) {
+    &__controls {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      max-width: 1140px;
+      z-index: 2;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+
+      & > * {
+        pointer-events: auto;
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__controls {
+      max-width: 1620px;
+    }
+  }
+}

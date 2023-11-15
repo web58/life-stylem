@@ -1,0 +1,29 @@
+.messengers {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px;
+
+  & > * {
+    margin: 8px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  @include media-min ($xl) {
+    &__link {
+      transition: transform .2s ease-in-out;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

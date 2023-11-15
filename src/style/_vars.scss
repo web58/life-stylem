@@ -1,0 +1,25 @@
+:root {
+  --black: #32312F;
+  --gray-90: #454442;
+  --gray-50: #7E7E7E;
+  --gray-20: #EBEBEB;
+  --gray-10: #F8F8F8;
+  --gray-5: #FCFCFC;
+  --white: #FFFFFF;
+  --yellow: #F6B326;
+  --green: #AACC00;
+  --green-hov: #9CBB00;
+  --red: #E2561A;
+  --blue: #1AA6E2;
+  --accent: var(--green);
+  --accent-hov: var(--green-hov);
+  --error: var(--red);
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+$main-font: "Golos Text";
+$mobile-min-width: 360px;

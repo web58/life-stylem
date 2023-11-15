@@ -1,0 +1,77 @@
+.footer-main {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  border-top: 1px solid var(--gray-20);
+
+  &__logo {
+    margin-bottom: 40px;
+
+    & a {
+      display: inline-block;
+      margin-bottom: 40px;
+      color: inherit;
+    }
+
+    & img,
+    & svg {
+      width: 236px;
+      height: 56px;
+    }
+  }
+
+  &__adress {
+    font-size: 16px;
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 50px;
+    text-align: left;
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 160px 1fr 255px;
+      gap: 30px;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+
+      & a {
+        margin-bottom: 24px;
+      }
+
+      & img,
+      & svg {
+        width: 160px;
+        height: 38px;
+      }
+    }
+
+    &__nav {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min ($xxl) {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 240px 1fr 240px;
+      gap: 30px;
+    }
+
+    &__logo {
+      margin-bottom: 40px;
+
+      & img,
+      & svg {
+        width: 236px;
+        height: 56px;
+      }
+    }
+  }
+}
