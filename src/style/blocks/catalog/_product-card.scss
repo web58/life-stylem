@@ -16,11 +16,9 @@
     margin-bottom: 16px;
     overflow: hidden;
 
-    @include no-image;
-
     & img {
       border-radius: 4px;
-      object-fit: cover;
+      object-fit: contain;
 
       @include fw-block;
     }
